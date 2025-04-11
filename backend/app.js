@@ -52,5 +52,11 @@ const init = async () => {
 
 init()
 
+// ROUTES
+const pokemonRoutes = require('./api/routes/pokemonRoutes')
+app.use('/pokemon', pokemonRoutes)
+
+
+
 // UNKNOWN ROUTES
 app.use((req, res) => res.send(null))
